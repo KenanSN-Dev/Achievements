@@ -3,15 +3,13 @@ package com.example.achievements.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Record(
-    @SerializedName("active")
-    val active: Boolean?,
+data class AchievementsResponseModel(
     @SerializedName("id")
     val id: Int?,
-    @SerializedName("image")
-    val image: String?,
     @SerializedName("label")
     val label: String?,
+    @SerializedName("records")
+    val records: List<RecordModel?>?,
     @SerializedName("title")
     val title: String?
 )

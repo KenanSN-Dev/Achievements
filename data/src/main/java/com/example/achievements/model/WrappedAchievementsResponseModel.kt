@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 
 data class WrappedAchievementsResponseModel(
     @SerializedName("data")
-    val `data`: List<Data?>?
+    val `data`: List<AchievementsResponseModel?>?
 )

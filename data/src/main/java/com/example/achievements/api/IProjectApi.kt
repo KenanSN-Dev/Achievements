@@ -1,8 +1,10 @@
 package com.example.achievements.api
 
 import com.example.achievements.model.WrappedAchievementsResponseModel
+import retrofit2.http.GET
 
 interface IProjectApi
 {
-    fun getAchievements():WrappedAchievementsResponseModel
+    @GET("/achievements")
+    suspend fun getAchievements():WrappedAchievementsResponseModel
 }
