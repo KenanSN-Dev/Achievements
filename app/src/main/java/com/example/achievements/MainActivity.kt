@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.achievementsErrorResponse.observe(this){error ->
             Toast.makeText(this,"Error : ${error}", Toast.LENGTH_LONG).show()
         }
+
     }
 
     private fun initViewModel() {

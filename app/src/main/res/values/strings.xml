@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Achievements</string>
+    <string name="personal_records">Personal Records</string>
+    <string name="_4_of_6">4 of 6</string>
 </resources>
