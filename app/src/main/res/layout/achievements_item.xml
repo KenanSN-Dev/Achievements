@@ -25,6 +25,7 @@
             android:textColor="@color/white"
             android:background="@color/on_secondary_variant"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_label"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Title"/>
         <TextView
@@ -36,11 +37,12 @@
             android:textSize="@dimen/_15sp"
             android:paddingHorizontal="@dimen/_10dp"
             android:paddingVertical="@dimen/_5dp"
-            android:text="@{model.title}"
+            android:text="@{model.label}"
             android:textColor="@color/white"
             android:background="@color/on_secondary_variant"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
             tools:text="@string/_4_of_6"
             />
         <androidx.recyclerview.widget.RecyclerView

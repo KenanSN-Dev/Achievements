@@ -2,13 +2,11 @@ package com.example.achievements.repository
 
 import com.example.achievements.api.IProjectApi
 import com.example.achievements.model.AchievementsResponseModel
-import com.example.achievements.network.RetrofitBuilder
+import javax.inject.Inject
 
-class Repository
+class Repository @Inject constructor(private val projectApi: IProjectApi)
 {
-    val retrofit = RetrofitBuilder.getInstance().create(IProjectApi::class.java)
-    suspend fun getAchievements():List<AchievementsResponseModel?>?
-    {
-        return retrofit.getAchievements().data
+    suspend fun getAchievements():List<AchievementsResponseModel?>?{
+        return projectApi.getAchievements().data
     }
 }
